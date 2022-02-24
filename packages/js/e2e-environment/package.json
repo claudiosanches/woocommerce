@@ -1,6 +1,6 @@
 {
   "name": "@woocommerce/e2e-environment",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "WooCommerce End to End Testing Environment Configuration.",
   "author": "Automattic",
   "license": "GPL-3.0-or-later",
@@ -66,6 +66,7 @@
     "build": "pnpm run clean && pnpm run compile",
     "prepare": "pnpm run build",
     "docker:up": "./bin/docker-compose.sh up",
+	"docker:wait": "bash ./bin/wait-for-build.sh",
     "docker:down": "./bin/docker-compose.sh down",
     "docker:clear-all": "docker rmi --force $(docker images -q)",
     "docker:ssh": "docker exec -it $(node utils/get-app-name.js)_wordpress-www /bin/bash",

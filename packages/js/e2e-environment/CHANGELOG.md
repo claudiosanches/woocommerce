@@ -1,5 +1,10 @@
 # Unreleased
 
+## Changed
+- Updated `resolveSingleE2EPath` 
+  - it resolves the full path if the filePath is valid
+  - otherwise, it removes `tests/e2e` from the given filePath before resolving a full path.
+
 ## Added
 
 - Added `post-results-to-github-pr.js` to post test results to a GitHub PR.
@@ -15,6 +20,7 @@
 - `WC_E2E_FOLDER` for mapping plugin root to path within repo
 - Added the `resolveSingleE2EPath()` method which builds a path to a specific E2E test
 - Added the ability to take screenshots from multiple test failures (when retried) in `utils/take-screenshot.js`.
+- `docker:wait` to allow for waiting for env to be built without running tests
 
 ## Changed
 
