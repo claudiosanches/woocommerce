@@ -185,6 +185,8 @@ final class WooCommerce {
 	 */
 	public function on_plugins_loaded() {
 		do_action( 'woocommerce_loaded' );
+
+		do_action( 'new_woo_action' );
 	}
 
 	/**

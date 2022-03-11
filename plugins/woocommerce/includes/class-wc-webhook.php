@@ -90,7 +90,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 */
 	public function enqueue() {
 		$hooks = $this->get_hooks();
-		$url   = $this->get_delivery_url();
+		$url   = apply_filters( 'new_woo_filter', $this->get_delivery_url() );
 
 		if ( is_array( $hooks ) && ! empty( $url ) ) {
 			foreach ( $hooks as $hook ) {
