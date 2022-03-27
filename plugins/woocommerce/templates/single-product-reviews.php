@@ -26,6 +26,7 @@ if ( ! comments_open() ) {
 ?>
 <div id="reviews" class="woocommerce-Reviews">
 	<div id="comments">
+		<p>test</p>
 		<h2 class="woocommerce-Reviews-title">
 			<?php
 			$count = $product->get_review_count();
