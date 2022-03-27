@@ -12,7 +12,7 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
- * @version     1.6.4
+ * @version     6.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,7 +30,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
+	<p>test</p>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 
