@@ -124,6 +124,9 @@ add_action( 'template_redirect', 'wc_prevent_adjacent_posts_rel_link_wp_head' );
  * @since 3.0.6
  */
 function wc_gallery_noscript() {
+	if ( apply_filters( 'some_filter', true ) ) {
+		do_action( 'some_hook' );
+	}
 	?>
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
 	<?php
@@ -1408,15 +1411,15 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	 */
 	function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $attr = array(), $placeholder = true ) {
 		global $product;
-		
+
 		if ( ! is_array( $attr ) ) {
 			$attr = array();
 		}
-		
+
 		if ( ! is_bool( $placeholder ) ) {
 			$placeholder = true;
 		}
-		
+
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 
 		return $product ? $product->get_image( $image_size, $attr, $placeholder ) : '';
