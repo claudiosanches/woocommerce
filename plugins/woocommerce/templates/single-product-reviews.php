@@ -23,6 +23,10 @@ if ( ! comments_open() ) {
 	return;
 }
 
+if ( apply_filters( 'some_filter', true ) ) {
+	do_action( 'some_hook' );
+}
+
 ?>
 <div id="reviews" class="woocommerce-Reviews">
 	<div id="comments">

@@ -28,6 +28,10 @@ get_header( 'shop' );
  */
 do_action( 'woocommerce_before_main_content' );
 
+if ( apply_filters( 'some_filter', true ) ) {
+	do_action( 'some_hook' );
+}
+
 ?>
 <header class="woocommerce-products-header">
 	<p>test</p>
