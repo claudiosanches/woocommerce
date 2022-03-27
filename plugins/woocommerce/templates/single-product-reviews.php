@@ -23,10 +23,15 @@ if ( ! comments_open() ) {
 	return;
 }
 
+/**
+ * @since 4.5.0
+ */
 if ( apply_filters( 'some_filter', true ) ) {
+	/**
+	 * @since 6.5.0
+	 */
 	do_action( 'some_hook' );
 }
-
 ?>
 <div id="reviews" class="woocommerce-Reviews">
 	<div id="comments">

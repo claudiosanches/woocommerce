@@ -124,7 +124,13 @@ add_action( 'template_redirect', 'wc_prevent_adjacent_posts_rel_link_wp_head' );
  * @since 3.0.6
  */
 function wc_gallery_noscript() {
+	/**
+	 * @since 6.5.0
+	 */
 	if ( apply_filters( 'some_filter', true ) ) {
+		/**
+		 * @since 4.5.0
+		 */
 		do_action( 'some_hook' );
 	}
 	?>
